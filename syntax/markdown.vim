@@ -34,6 +34,7 @@ endif
 syntax spell toplevel
 syntax case ignore
 syntax sync linebreaks=1
+syntax sync minlines=20
 
 " Additions to HTML groups
 syntax region htmlBold    start=/\\\@<!\(^\|\A\)\@=\*\@<!\*\*\*\@!\S\@=/  end=/\S\\\@<!\*\@<!\*\*\*\@!\($\|\A\)\@=/  contains=htmlItalic,@Spell
@@ -62,8 +63,9 @@ syntax match  mkdRule      /^\s*-\s\{0,1}-\s\{0,1}-$/
 syntax match  mkdRule      /^\s*_\s\{0,1}_\s\{0,1}_$/
 syntax match  mkdRule      /^\s*-\{3,}$/
 syntax match  mkdRule      /^\s*\*\{3,5}$/
-syntax match  mkdListItem  /^\s*[-*+]\s\+.*\n\(\(^.\+\n\)*\n\?\)\(\(^\(\s\{4}\|\t\)\+.*\n\)\(^.\+\n\)*\n\?\)*/ contains=mkdListCode,mkdCode,htmlBold,htmlItalic,htmlSpecialChar,@Spell
-syntax match  mkdListItem  /^\s*\d\+\.\s\+.*\n\(\(^.\+\n\)*\n\?\)\(\(^\(\s\{4}\|\t\)\+.*\n\)\(^.\+\n\)*\n\?\)*/ contains=mkdListCode,mkdCode,htmlBold,htmlItalic,htmlSpecialChar,@Spell
+syntax match  mkdListItem  /^\s*[-*+]\s\+.*\n\(\(^.\+\n\)*\n\?\)\(\(^\(\s\{4}\|\t\)\+.*\n\)\(^.\+\n\)*\n\?\)*/ contains=mkdListCode,mkdCode,htmlBold,htmlItalic,htmlSpecialChar,@Spell,mkdLink,mkdBlockquote,htmlTag,htmlEndTag,htmlLink
+syntax match  mkdListItem  /^\s*\d\+\.\s\+.*\n\(\(^.\+\n\)*\n\?\)\(\(^\(\s\{4}\|\t\)\+.*\n\)\(^.\+\n\)*\n\?\)*/ contains=mkdListCode,mkdCode,htmlBold,htmlItalic,htmlSpecialChar,@Spell,mkdLink,mkdBlockquote,htmlTag,htmlEndTag,htmlLink
+
 "
 syntax match  mkdBlockCode  /^\s*\n\(^\(\s\{4}\|\t\).*\n\)\+/
 syntax match  mkdListCode   /^\s*\n\(^\(\s\{8}\|\t{2}\).*\n\)\+/
