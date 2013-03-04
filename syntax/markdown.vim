@@ -93,7 +93,7 @@ HtmlHiLink mkdListCode      String
 HtmlHiLink mkdBlockCode     String
 HtmlHiLink mkdBlockquote    Comment
 HtmlHiLink mkdLineContinue  Comment
-HtmlHiLink mkdListItem      Identifier
+HtmlHiLink mkdListItem      Ignore
 HtmlHiLink mkdRule          Identifier
 HtmlHiLink mkdLineBreak     Todo
 HtmlHiLink mkdLink          htmlLink
