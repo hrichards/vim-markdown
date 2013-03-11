@@ -33,8 +33,7 @@ endif
 
 syntax spell toplevel
 syntax case ignore
-syntax sync linebreaks=1
-syntax sync minlines=20
+syntax sync fromstart
 
 " Additions to HTML groups
 syntax region htmlBold    start=/\\\@<!\(^\|\A\)\@=\*\@<!\*\*\*\@!\S\@=/  end=/\S\\\@<!\*\@<!\*\*\*\@!\($\|\A\)\@=/  contains=htmlItalic,@Spell
