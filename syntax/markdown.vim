@@ -44,6 +44,7 @@ syntax region htmlItalic  start=/\\\@<!\(^\|\A\)\@=\<_\@<!__\@!\S\@=/    end=/\S
 
 " [link](URL) | [link][id] | [link][]
 syntax region mkdLink matchgroup=mkdDelimiter start="\!\?\["  end="\]\ze\s*[[(]" contains=@Spell nextgroup=mkdURL,mkdID skipwhite
+syntax region mkdWikiLink matchgroup=mkdDelimiter start="\[\["  end="\]\]" contains=@Spell
 syntax region mkdID   matchgroup=mkdDelimiter start="\["      end="\]" contained
 syntax region mkdURL  matchgroup=mkdDelimiter start="("       end=")"  contained
 
@@ -96,6 +97,7 @@ HtmlHiLink mkdListItem      Ignore
 HtmlHiLink mkdRule          Identifier
 HtmlHiLink mkdLineBreak     Todo
 HtmlHiLink mkdLink          htmlLink
+HtmlHiLink mkdWikiLink          htmlLink
 HtmlHiLink mkdURL           htmlString
 HtmlHiLink mkdID            Identifier
 HtmlHiLink mkdLinkDef       mkdID
